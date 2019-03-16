@@ -1,0 +1,50 @@
+.search-bar {
+    height: 50px;
+}
+
+.btn-search {
+    height: 50px;
+}
+
+.bannerInfo {
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+@media (min-width: 768px) {
+    .bannerInfo {
+        padding-top: 160px;
+    }
+}
+
+.bannerInfo h1 {
+    color: navy;
+    margin: 0 0 24px 0;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.banner {
+    min-height: 580px;
+}
+
+.search-form {
+    display: inline-block;
+}
+
+/* NAV BAR */
+.navbar {
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.nav-item {
+    font-size: 1.2rem;
+}
