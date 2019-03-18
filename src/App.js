@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { BannerInfo } from './shared/Header/BannerInfo';
 import { Nav } from './shared/Header/Nav';
 
+import { PadList } from './components/PadSection/PadList';
+
 import './App.css';
 
 class App extends Component {
@@ -13,6 +15,7 @@ class App extends Component {
           <Nav />
           <BannerInfo />
         </div>
+        <PadList />
       </div>
     );
   }
