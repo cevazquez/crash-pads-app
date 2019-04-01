@@ -7,10 +7,11 @@ export function PadCard(props) {
 
     return (
         <div className="pad-card">
-            <Link to={`pads/${pad.id}`}>
+            <Link className='detail-link' to={`pads/${pad.id}`}>
                 <h4>{pad.city}</h4>
             </Link>
-            <h2>{pad.title}</h2>
+            <h2 className="card-title">{pad.title}</h2>
+            <h4 className={`category-subtitle ${pad.category}`}>{pad.category}</h4>
             <h4>{pad.description}</h4>
             <h5>${pad.monthlyRate} per month</h5>
         </div>
