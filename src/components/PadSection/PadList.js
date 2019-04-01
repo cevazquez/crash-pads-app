@@ -2,6 +2,8 @@ import React from "react";
 import { PadCard } from "./PadCard";
 import { connect } from 'react-redux';
 
+import * as actions from '../../actions';
+
 class PadList extends React.Component {
     renderPads = () => {
         return this.props.pads.map((pad, index) => {
@@ -9,6 +11,10 @@ class PadList extends React.Component {
             return <PadCard key={index} pad={pad} />;
         });
     };
+
+    componentWillMount() {
+        this.props.dispatch(actions.fetchPads());
+    }
 
     render() {
         return (
@@ -22,7 +28,7 @@ class PadList extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        pads: state.pads
+        pads: state.pads.data
     }
 }
 
