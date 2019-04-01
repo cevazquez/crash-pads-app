@@ -1,2 +1,2 @@
 export const FETCH_PADS = 'FETCH_PADS';
-export const FETCH_PAD_BY_ID = 'FETCH_PAD_BY_ID';
+export const FETCH_PAD_BY_ID_SUCCESS = 'FETCH_PAD_BY_ID_SUCCESS';

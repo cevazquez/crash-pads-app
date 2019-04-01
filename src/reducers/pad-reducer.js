@@ -1,4 +1,4 @@
-import { FETCH_PADS, FETCH_PAD_BY_ID } from "../actions/types";
+import { FETCH_PADS, FETCH_PAD_BY_ID_SUCCESS } from "../actions/types";
 
 const INITIAL_STATE = {
   pads: {
@@ -20,7 +20,7 @@ export const padReducer = (state = INITIAL_STATE.pads, action) => {
 
 export const selectedPadReducer = (state = INITIAL_STATE.pad, action) => {
   switch (action.type) {
-    case FETCH_PAD_BY_ID:
+    case FETCH_PAD_BY_ID_SUCCESS:
       return { ...state, data: action.pad };
     default:
       return state;
