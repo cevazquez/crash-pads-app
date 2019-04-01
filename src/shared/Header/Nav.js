@@ -11,8 +11,8 @@ export function Nav() {
                 </button>
                 <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
                     <div className='navbar-nav ml-auto'>
-                        <a className='nav-item nav-link active' href=''>Login<span className='sr-only'>(current)</span></a>
-                        <a className='nav-item nav-link' href=''>Sign Up</a>
+                        <a className='nav-item nav-link active' href='/pads'>Login<span className='sr-only'>(current)</span></a>
+                        <a className='nav-item nav-link' href='/pads'>Sign Up</a>
                     </div>
                 </div>
             </div>
