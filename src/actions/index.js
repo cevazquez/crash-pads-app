@@ -1,4 +1,9 @@
-import { FETCH_PADS, FETCH_PAD_BY_ID_SUCCESS } from "./types";
+import {
+  FETCH_PADS,
+  FETCH_PAD_BY_ID_SUCCESS,
+  FETCH_PAD_BY_ID_INIT
+}
+  from "./types";
 
 const pads = [
   {
@@ -51,6 +56,20 @@ const pads = [
   }
 ];
 
+const fetchPadByIdInit = () => {
+
+  return {
+    type: FETCH_PAD_BY_ID_INIT
+  }
+}
+
+const fetchPadByIdSuccess = (pad) => {
+  return {
+    type: FETCH_PAD_BY_ID_SUCCESS,
+    pad
+  }
+}
+
 export const fetchPads = () => {
   return {
     type: FETCH_PADS,
@@ -59,7 +78,8 @@ export const fetchPads = () => {
 };
 
 export const fetchPadById = padId => {
-  return function(dispatch) {
+  return function (dispatch) {
+    dispatch(fetchPadByIdInit());
     // Simulate server call
     setTimeout(() => {
       const pad = pads.find(pad => pad.id === padId);
@@ -68,10 +88,3 @@ export const fetchPadById = padId => {
     }, 1000);
   };
 };
-
-const fetchPadByIdSuccess = (pad) => {
-  return {
-    type: FETCH_PAD_BY_ID_SUCCESS,
-    pad
-  }
-}
